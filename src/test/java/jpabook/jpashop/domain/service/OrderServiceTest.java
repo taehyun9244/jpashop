@@ -4,9 +4,10 @@ import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderStatus;
-import jpabook.jpashop.domain.item.Book;
-import jpabook.jpashop.domain.item.Item;
-import jpabook.jpashop.domain.repository.OrderRepository;
+import jpabook.jpashop.item.Book;
+import jpabook.jpashop.item.Item;
+import jpabook.jpashop.repository.OrderRepository;
+import jpabook.jpashop.service.OrderService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -24,7 +25,8 @@ import javax.persistence.EntityManager;
 class OrderServiceTest {
 
     @Autowired EntityManager em;
-    @Autowired OrderService orderService;
+    @Autowired
+    OrderService orderService;
     @Autowired OrderRepository orderRepository;
 
     @Test
